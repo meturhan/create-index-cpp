@@ -70,13 +70,17 @@ flowchart TD
     D --> E[Serialize index to file]
     
     subgraph Index[Planned Data Structures]
-        F[Binary Search Tree<br>or B-Tree]
-        G[Pointer Blocks<br>with overflow chains]
+        F1[Binary Search Tree]
+        F2[or B-Tree]
+        F1 ~~~ F2
+        G1[Pointer Blocks]
+        G2[with overflow chains]
+        G1 ~~~ G2
     end
     
-    D --> F
-    F --> G
-    G --> E
+    D --> F1
+    F1 --> G1
+    G1 --> E
 ```
 
 ### Expected Concepts
